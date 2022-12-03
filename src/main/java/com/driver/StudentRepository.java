@@ -73,22 +73,22 @@ public class StudentRepository {
 
     public void deleteAllTeacher()
     {
-//        List<String> res = new ArrayList<>();
-//        for(String str: teacherStudentMapping.keySet())
-//        {
-//            int size = teacherStudentMapping.get(str).size();
-//            for(int i = 0; i<size; i++)
-//                res.add(teacherStudentMapping.get(str).get(i));
-//        }
-//        //res me sare students sab teachers ke add hogaye
+        List<String> res = new ArrayList<>();
+        for(String str: teacherStudentMapping.keySet())
+        {
+            int size = teacherStudentMapping.get(str).size();
+            for(int i = 0; i<size; i++)
+                res.add(teacherStudentMapping.get(str).get(i));
+        }
+        //res me sare students sab teachers ke add hogaye
 
-        studentMap.clear();
+        //studentMap.clear();
         teacherMap.clear();
         teacherStudentMapping.clear();
-//        int len = res.size();
-//        for(int i=0; i<len; i++)
-//        {
-//            if(studentMap.containsKey(res.get(i))) studentMap.remove(res.get(i));
-//        }
+        int len = res.size();
+        for(int i=0; i<len; i++)
+        {
+            if(studentMap.containsKey(res.get(i))) studentMap.remove(res.get(i));
+        }
     }
 }
